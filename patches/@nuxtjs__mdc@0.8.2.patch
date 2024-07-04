@@ -1,0 +1,18 @@
+diff --git a/dist/runtime/components/MDCRenderer.vue b/dist/runtime/components/MDCRenderer.vue
+index 3c1e194ae0a742f5976a46711cc633b29f0ae4d3..ba9fd161c26975afaadb18506e417ed3f7c8d5b8 100644
+--- a/dist/runtime/components/MDCRenderer.vue
++++ b/dist/runtime/components/MDCRenderer.vue
+@@ -93,11 +93,11 @@ export default defineComponent({
+     function defaultSlotRenderer() {
+       if (unwrap) {
+         return flatUnwrap(
+-          renderSlots(body, h, meta, meta).default(),
++          renderSlots(body, h, meta, meta).default?.(),
+           typeof unwrap === "string" ? unwrap.split(" ") : ["*"]
+         );
+       }
+-      return renderSlots(body, h, meta, meta).default();
++      return renderSlots(body, h, meta, meta).default?.();
+     }
+   }
+ });

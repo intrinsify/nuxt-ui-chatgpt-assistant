@@ -1,0 +1,41 @@
+{
+
+  "name": "nuxt-ui-chatgpt-assistant",
+  "description": "UI for a custom ChatGPT assistant, built with Nuxt",
+  "contributors": [
+    "Alexander Lichter <npm@lichter.io> (https://lichter.io)",
+    "Christopher H. Stappert <christopher.stappert@intrinsify.de> (https://chri.so)"
+  ],
+  "version": "0.5.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.7.0",
+    "@nuxt/image": "^1.7.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "nuxt": "^3.11.2",
+    "openai": "^4.49.1",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/mdc": "^0.8.2",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "@vercel/kv": "^2.0.0",
+    "nuxt-icon": "^0.6.10"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@nuxtjs/mdc@0.8.2": "patches/@nuxtjs__mdc@0.8.2.patch"
+    }
+  }
+}
